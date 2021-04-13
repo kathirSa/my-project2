@@ -1,0 +1,24 @@
+  <div>
+    <form #user="ngForm" (ngSubmit)="onSubmit(user.value)">
+      <label for="email">Your Email</label>
+      <input type="text" name="email" id="email" placeholder="Your email.." ngModel required>
+  
+      <label for="password">Password</label>
+      <input type="password" name="passwd" id="passwd" placeholder="Your password.." ngModel required>
+  
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender"  ngModel required>
+        <option value="male" selected>Male</option>
+        <option value="female">female</option>
+        <option value="na" >na</option>
+      </select>
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br>
+  <div *ngIf="response">
+    <p>followers: {{response.followers}}</p>
+  </div>
+ 
+  
